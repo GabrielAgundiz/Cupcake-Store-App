@@ -1,0 +1,8 @@
+rootProject.name = "Cupcake"
+include ':app'
+include ':practica5modulo'
+def settingDir = settingsDir
+
+setBinding(new Binding([gradle: this]))
+project(':practica5modulo').projectDir = new File('../practica5modulo')
+evaluate(new File(settingDir.parentFile, 'practica5modulo/.android/include_flutter.groovy'))
